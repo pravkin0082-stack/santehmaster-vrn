@@ -22,4 +22,18 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Сантехника -->
+  <url>
+    <loc>https://santehmaster-vrn.ru/santehnika.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
+   <!-- Техника -->
+  <url>
+    <loc>https://santehmaster-vrn.ru/tehnika.html</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>0.8</priority>
+  </url>
+
 </urlset>
