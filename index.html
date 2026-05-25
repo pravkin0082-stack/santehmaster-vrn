@@ -1,0 +1,645 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Сантехника, сборка мебели и установка бытовой техники в Воронеже. Выезд мастера по городу. Быстро и с гарантией."
+    />
+    <title>Частный мастер по срочному ремонту и установки сантехники.</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+    <link rel="manifest" href="site.webmanifest" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #fff;
+        color: #111;
+      }
+
+      .container {
+        width: 90%;
+        max-width: 1400px;
+        margin: auto;
+      }
+
+      header {
+        background: white;
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-box {
+        width: 55px;
+        height: 55px;
+        background: #ffc107;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+      }
+
+      .logo-text h1 {
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .logo-text p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        gap: 40px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #ffc107;
+      }
+
+      .phone {
+        font-size: 26px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
+
+      .hero {
+        padding: 40px 0;
+      }
+
+      .hero-content {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 50px;
+        flex-wrap: wrap;
+      }
+
+      .hero-image {
+        flex: 1;
+        min-width: 320px;
+      }
+
+      .hero-image img {
+        width: 100%;
+        border-radius: 20px;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      .hero-text {
+        flex: 1;
+        min-width: 320px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #ffc107;
+        padding: 12px 22px;
+        border-radius: 30px;
+        font-weight: bold;
+        margin-bottom: 25px;
+        font-size: 18px;
+      }
+
+      .hero-text h2 {
+        font-size: 80px;
+        line-height: 0.95;
+        margin-bottom: 25px;
+        font-weight: 900;
+      }
+
+      .yellow {
+        color: #ffc107;
+      }
+
+      .subtitle {
+        font-size: 26px;
+        margin-bottom: 30px;
+        color: #444;
+      }
+
+      .description {
+        font-size: 24px;
+        line-height: 1.6;
+        color: #555;
+        margin-bottom: 40px;
+      }
+
+      .buttons {
+        display: flex;
+        gap: 20px;
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+      }
+
+      .btn {
+        padding: 22px 40px;
+        border-radius: 14px;
+        font-size: 22px;
+        font-weight: bold;
+        text-decoration: none;
+        transition: 0.3s;
+        display: inline-block;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-yellow {
+        background: #ffc107;
+        color: black;
+        box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
+      }
+
+      .btn-yellow:hover {
+        background: #ffcd38;
+        transform: translateY(-2px);
+      }
+
+      .advantages {
+        display: flex;
+        gap: 50px;
+        flex-wrap: wrap;
+        margin-top: 30px;
+      }
+
+      .advantage {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        font-size: 22px;
+      }
+
+      .advantage span {
+        font-size: 40px;
+      }
+
+      .services-section {
+        padding: 100px 0;
+        background: #fafafa;
+      }
+
+      .section-title {
+        text-align: center;
+        font-size: 60px;
+        margin-bottom: 20px;
+        font-weight: 900;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        font-size: 24px;
+        color: #666;
+        margin-bottom: 60px;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 30px;
+      }
+
+      .service-card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px 30px;
+        border: 1px solid #eee;
+        transition: 0.3s;
+      }
+
+      .service-card:hover {
+        transform: translateY(-10px) scale(1.02);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      }
+
+      .service-icon {
+        font-size: 50px;
+        margin-bottom: 20px;
+      }
+
+      .service-card h3 {
+        font-size: 30px;
+        margin-bottom: 20px;
+      }
+
+      .service-card p {
+        font-size: 20px;
+        line-height: 1.6;
+        color: #555;
+      }
+
+      .review-card {
+        background: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+      }
+
+      @media (max-width: 900px) {
+        .hero-text h2 {
+          font-size: 52px;
+        }
+
+        nav {
+          gap: 20px;
+        }
+
+        nav a {
+          font-size: 16px;
+        }
+
+        .phone {
+          margin-top: 20px;
+          font-size: 20px;
+        }
+
+        .section-title {
+          font-size: 42px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-box">🛠</div>
+
+          <div class="logo-text">
+            <h1>САНТЕХНИК</h1>
+            <p>частный мастер</p>
+            <p>выезд по всему Воронежу</p>
+          </div>
+        </div>
+
+        <nav>
+          <a href="#">Главная</a>
+          <a href="#about">О мастере</a>
+          <a href="#services">Услуги</a>
+          <a href="#contacts">Контакты</a>
+        </nav>
+
+        <a href="tel:+79507542549" class="phone"> 📞 +7 (950) 754-25-49 </a>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="container hero-content">
+        <div class="hero-image">
+          <img
+            src="b9dc294d-be9d-4b53-9476-0d96540d8d34.jpg"
+            alt="Мастер выполняет ремонт и установку техники"
+          />
+        </div>
+
+        <div class="hero-text">
+          <div class="badge">РЕШУ ЛЮБУЮ ПРОБЛЕМУ</div>
+
+          <h1>Сантехник в Воронеже</h1>
+          <h2>
+            МАСТЕР<br />
+            <span class="yellow"> РЕМОНТ И ОБСЛУЖИВАНИЕ САНТЕХНИКИ</span>
+          </h2>
+
+          <div class="subtitle">Быстро. Качественно. Надёжно.</div>
+
+          <div class="description">
+            Выполню любые сантехнические работы по дому, офису. Работаю по всему
+            Воронежу
+          </div>
+
+          <div class="buttons">
+            <a
+              href="https://max.ru/u/f9LHodD0cOLFTzofiPfg1xkm-Vz_ox9JEG92-BlYmTcTkzZdpzP6lUhtj6s"
+              target="_blank"
+              class="btn btn-yellow"
+            >
+              ВЫЗВАТЬ МАСТЕРА →
+            </a>
+          </div>
+
+          <div class="advantages">
+            <div class="advantage">
+              <span>🛡</span>
+              <div>Гарантия<br />на работы</div>
+            </div>
+
+            <div class="advantage">
+              <span>🕒</span>
+              <div>Приезд<br />в день заявки</div>
+            </div>
+
+            <div class="advantage">
+              <span>👍</span>
+              <div>Закупаю<br />материалы</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="about" style="padding: 70px 0; background: #fff">
+      <div
+        class="container"
+        style="max-width: 900px; margin: auto; text-align: center"
+      >
+        <h2 style="font-size: 42px; margin-bottom: 25px; text-align: center">
+          О мастере
+        </h2>
+
+        <p
+          style="
+            font-size: 24px;
+            line-height: 1.8;
+            color: #444;
+            text-align: center;
+          "
+        >
+          Меня зовут <strong>Александр</strong>, на вызов приезжаю только я.
+          Опыт 12 лет — знаю тонкости и «подводные камни» каждой задачи.
+        </p>
+
+        <p
+          style="
+            font-size: 24px;
+            line-height: 1.8;
+            color: #444;
+            margin-top: 20px;
+            text-align: center;
+          "
+        >
+          Я <strong style="color: #e60000">❗️НЕ сотрудничаю❗️</strong> с
+          посредниками и другими сторонними организациями.
+        </p>
+
+        <p
+          style="
+            font-size: 20px;
+            margin-top: 20px;
+            color: #666;
+            text-align: center;
+          "
+        >
+          Вы общаетесь напрямую с мастером — без диспетчеров и переплат.
+        </p>
+      </div>
+    </section>
+
+    <section class="services-section" id="services">
+      <div class="container">
+        <h2 class="section-title">МОИ УСЛУГИ</h2>
+
+        <div class="section-subtitle">
+          Решу задачи любого уровня сложности. Перечень ПОЛОМОК и их УСТРАНЕНИЕ
+          очень огромный . Всё беру с собой — не нужно покупать расходники
+          заранее, даю гарантию на работы и установленные детали, честные цены —
+          озвучиваю стоимость до начала работ, без скрытых платежей, оплату
+          принимаю после выполнения — вы проверяете результат и только потом
+          рассчитываетесь, аккуратность — сохраняю чистоту, убираю за собой
+          мусор. Консультации по профилактике поломок. Бесплатная диагностика
+          при заказе ремонта. Поэтому предлагаю Вам связаться со мной по
+          телефону или в личные сообщения ВК.
+        </div>
+
+        <div class="services">
+          <a
+            href="santehnika.html"
+            target="_blank"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="service-card">
+              <div class="service-icon">🚰</div>
+
+              <h3>Услуги сантехника в Воронеже</h3>
+
+              <p>
+                Установка и ремонт сантехники любой сложности в Воронеже.-Ремонт
+                и замена СМЕСИТЕЛЯ. Ремонт и замена УНИТАЗА. Замена СЧЕТЧИКОВ
+                водоснабжения. Замена ШАРОВЫХ кранов . Замена РЕГУЛЯТОРОВ
+                давления водоснабжения. Устранение ТЕЧИ.
+              </p>
+            </div>
+          </a>
+
+          <a
+            href="tehnika.html"
+            target="_blank"
+            style="text-decoration: none; color: inherit"
+          >
+            <div class="service-card">
+              <div class="service-icon">🪑</div>
+
+              <h3>Установка бытовой техники в Воронеже</h3>
+
+              <p>
+                Подключение СТИРАЛЬНОЙ И ПОСУДОМОЕЧНОЙ машинки. Установка и
+                подключение БОЙЛЕРА. Установка ПОЛОТЕНЦЕСУШИТЕЛЯ .Установка и
+                подключение РАДИАТОРОВ ОТОПЛЕНИЯ .
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+    <section style="padding: 90px 0; background: #fafafa">
+      <div class="container">
+        <h2 style="text-align: center; font-size: 44px; margin-bottom: 20px">
+          Прайс на услуги сантехника
+        </h2>
+
+        <p
+          style="
+            text-align: center;
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 50px;
+          "
+        >
+          Точная стоимость зависит от сложности работ
+        </p>
+
+        <div
+          style="
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            gap: 30px;
+          "
+        >
+          <!-- ВОДОСНАБЖЕНИЕ -->
+          <div style="background: #fff; padding: 25px; border-radius: 15px">
+            <h3>💧 Водоснабжение</h3>
+            <p>Монтаж систем водоснабжения — <strong>от 2 000 ₽</strong></p>
+            <p>Монтаж сантехнических труб — <strong>от 2 000 ₽</strong></p>
+            <p>Демонтаж систем — <strong>от 5 000 ₽</strong></p>
+            <p>Перенос труб ХВС и ГВС — <strong>от 5 000 ₽</strong></p>
+            <p>Подвод к сети — <strong>от 2 000 ₽</strong></p>
+            <p>Проектирование — <strong>5 000 ₽</strong></p>
+          </div>
+
+          <!-- КАНАЛИЗАЦИЯ -->
+          <div style="background: #fff; padding: 25px; border-radius: 15px">
+            <h3>🚰 Канализация</h3>
+            <p>Монтаж канализации — <strong>от 2 000 ₽</strong></p>
+            <p>Прокладка труб — <strong>от 2 000 ₽</strong></p>
+            <p>Демонтаж — <strong>500 ₽ — 20 000 ₽</strong></p>
+            <p>Подвод к сети — <strong>1 500 ₽</strong></p>
+            <p>Ремонт коллекторов — <strong>10 000 ₽</strong></p>
+          </div>
+
+          <!-- ОТОПЛЕНИЕ -->
+          <div style="background: #fff; padding: 25px; border-radius: 15px">
+            <h3>🔥 Отопление</h3>
+            <p>Установка радиатора — <strong>от 5 000 ₽</strong></p>
+            <p>Демонтаж труб — <strong>от 5 000 ₽</strong></p>
+            <p>Демонтаж радиаторов — <strong>от 2 000 ₽</strong></p>
+          </div>
+
+          <!-- ЗАСОРЫ -->
+          <div style="background: #fff; padding: 25px; border-radius: 15px">
+            <h3>🧹 Засоры</h3>
+            <p>Устранение засора — <strong>от 3 000 ₽</strong></p>
+            <p>Прочистка канализации — <strong>от 3 000 ₽</strong></p>
+            <p>Сифон — <strong>2 000 ₽</strong></p>
+            <p>Унитаз — <strong>3 000 ₽ — 6 000 ₽</strong></p>
+          </div>
+
+          <!-- САНТЕХНИКА -->
+          <div style="background: #fff; padding: 25px; border-radius: 15px">
+            <h3>🚽 Сантехника</h3>
+            <p>Протечки — <strong>от 2 000 ₽</strong></p>
+            <p>Счётчик — <strong>от 2 500 ₽</strong></p>
+            <p>Смеситель — <strong>от 3 000 ₽</strong></p>
+            <p>Унитаз — <strong>5 000 ₽ — 10 000 ₽</strong></p>
+            <p>Ванна — <strong>7 000 ₽ — 20 000 ₽</strong></p>
+          </div>
+
+          <!-- ТЕХНИКА -->
+          <div style="background: #fff; padding: 25px; border-radius: 15px">
+            <h3>⚙️ Техника</h3>
+            <p>Стиральная машина — <strong>3 000 ₽ — 5 000 ₽</strong></p>
+            <p>Посудомойка — <strong>3 000 ₽ — 5 000 ₽</strong></p>
+            <p>Бойлер — <strong>6 000 ₽ — 20 000 ₽</strong></p>
+            <p>Полотенцесушитель — <strong>от 4 000 ₽</strong></p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section style="padding: 60px 0; background: #f5f5f5; text-align: center">
+      <div class="container">
+        <h2 style="font-size: 40px; margin-bottom: 20px">
+          Постоянным клиентам — скидки. Скидка 10% пенсионерам и многодетным
+          семьям. 🎁
+        </h2>
+
+        <p
+          style="
+            font-size: 24px;
+            color: #444;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: auto;
+          "
+        >
+          Я ценю своих клиентов. Постоянным заказчикам предоставляю скидки на
+          услуги, а также выдаю карту постоянного клиента для выгодного
+          обслуживания.
+        </p>
+      </div>
+    </section>
+    <section
+      id="contacts"
+      style="
+        padding: 100px 0;
+        background: #111;
+        color: white;
+        text-align: center;
+      "
+    >
+      <div class="container">
+        <h2 class="section-title" style="color: white">КОНТАКТЫ</h2>
+
+        <div style="font-size: 28px; line-height: 2; margin-top: 40px">
+          <p>📞 +7 (950) 754-25-49</p>
+
+          <p>
+            ✉
+            <a href="mailto:sander54828589@mail.ru" style="color: white">
+              sander54828589@mail.ru
+            </a>
+          </p>
+
+          <p>
+            VK:
+            <a
+              href="https://vk.ru/id789050101"
+              target="_blank"
+              style="color: white"
+            >
+              Мой профиль ВКонтакте
+            </a>
+          </p>
+
+          <p>📍 Выезд по всему городу Воронежу</p>
+        </div>
+
+        <div class="buttons" style="justify-content: center; margin-top: 50px">
+          <a
+            href="https://max.ru/u/f9LHodD0cOLFTzofiPfg1xkm-Vz_ox9JEG92-BlYmTcTkzZdpzP6lUhtj6s"
+            target="_blank"
+            class="btn btn-yellow"
+          >
+            НАПИСАТЬ В MAX
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <footer
+      style="
+        background: #000;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+      "
+    >
+      © 2026 Мастер на все руки — Все права защищены
+    </footer>
+  </body>
+</html>
