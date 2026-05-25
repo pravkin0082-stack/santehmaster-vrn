@@ -143,11 +143,14 @@
         font-size: 18px;
       }
 
-      .hero-text h2 {
-        font-size: 80px;
-        line-height: 0.95;
-        margin-bottom: 25px;
+      .hero-text h1 {
+        font-size: 30px;
+        line-height: 1.2;
         font-weight: 900;
+        margin-bottom: 25px;
+      }
+      .hero-text h1 span {
+        display: inline-block;
       }
 
       .yellow {
@@ -287,14 +290,14 @@
         position: fixed;
         right: 20px;
         bottom: 20px;
-        width: 65px;
-        height: 65px;
+        width: 55px;
+        height: 55px;
         background: #ffc107;
         border-radius: 50%;
         display: flex;
         justify-content: center;
         align-items: center;
-        font-size: 32px;
+        font-size: 28px;
         text-decoration: none;
         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
         z-index: 999;
@@ -347,6 +350,22 @@
           text-align: center;
         }
       }
+      @media (max-width: 700px) {
+        #price div[style*="background: #fff"] {
+          padding: 20px !important;
+          font-size: 18px !important;
+        }
+
+        #price h3 {
+          font-size: 24px;
+          margin-bottom: 15px;
+        }
+
+        #price p {
+          font-size: 17px;
+          line-height: 1.6;
+        }
+      }
     </style>
   </head>
   <body>
@@ -387,7 +406,7 @@
           <div class="badge">РЕШУ ЛЮБУЮ ПРОБЛЕМУ</div>
 
           <h1>
-            МАСТЕР САНТЕХНИК<br />
+            МАСТЕР САНТЕХНИК В ВОРОНЕЖЕ<br />
             <span class="yellow">РЕМОНТ И ОБСЛУЖИВАНИЕ САНТЕХНИКИ</span>
           </h1>
 
@@ -554,7 +573,7 @@
         <div
           style="
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 30px;
           "
         >
