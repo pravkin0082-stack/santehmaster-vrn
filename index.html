@@ -7,7 +7,11 @@
       name="description"
       content="Сантехника, сборка мебели и установка бытовой техники в Воронеже. Выезд мастера по городу. Быстро и с гарантией."
     />
-    <title>Частный мастер по срочному ремонту и установке сантехники.</title>
+    <meta
+      name="keywords"
+      content="сантехник Воронеж, услуги сантехника, ремонт сантехники, установка сантехники"
+    />
+    <title>Сантехник в Воронеже — ремонт и установка сантехники</title>
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -192,6 +196,9 @@
         background: #ffcd38;
         transform: translateY(-2px);
       }
+      .btn:active {
+        transform: scale(0.98);
+      }
 
       .advantages {
         display: flex;
@@ -271,6 +278,22 @@
         border-radius: 20px;
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
       }
+      .call-button {
+        position: fixed;
+        right: 20px;
+        bottom: 20px;
+        width: 65px;
+        height: 65px;
+        background: #ffc107;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 32px;
+        text-decoration: none;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        z-index: 999;
+      }
 
       @media (max-width: 900px) {
         .hero-text h2 {
@@ -292,6 +315,31 @@
 
         .section-title {
           font-size: 42px;
+        }
+      }
+      @media (max-width: 700px) {
+        .header-content {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        nav {
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+
+        .hero-text h1 {
+          font-size: 42px;
+        }
+
+        .description,
+        .subtitle {
+          font-size: 20px;
+        }
+
+        .btn {
+          width: 100%;
+          text-align: center;
         }
       }
     </style>
@@ -333,11 +381,10 @@
         <div class="hero-text">
           <div class="badge">РЕШУ ЛЮБУЮ ПРОБЛЕМУ</div>
 
-          <h1>Сантехник в Воронеже</h1>
-          <h2>
+          <h1>
             МАСТЕР САНТЕХНИК<br />
-            <span class="yellow"> РЕМОНТ И ОБСЛУЖИВАНИЕ САНТЕХНИКИ</span>
-          </h2>
+            <span class="yellow">РЕМОНТ И ОБСЛУЖИВАНИЕ САНТЕХНИКИ</span>
+          </h1>
 
           <div class="subtitle">Быстро. Качественно. Надёжно.</div>
 
@@ -500,7 +547,7 @@
         <div
           style="
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(520px, 1fr));
             gap: 30px;
           "
         >
@@ -644,5 +691,6 @@
     >
       © 2026 Мастер сантехник — Все права защищены
     </footer>
+    <a href="tel:+79507542549" class="call-button">📞</a>
   </body>
 </html>
