@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
@@ -8,4 +9,16 @@
     <priority>1.0</priority>
   </url>
 
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- Главная страница -->
+  <url>
+    <loc>https://santehmaster-vrn.ru/</loc>
+    <lastmod>2026-05-24</lastmod>
+    <priority>1.0</priority>
+  </url>
+
+>>>>>>> ab2efca88be85fb088aef6f3e2f51b2fa9fbcb58
 </urlset>

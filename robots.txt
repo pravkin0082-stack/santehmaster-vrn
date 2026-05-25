@@ -1,4 +1,10 @@
+<<<<<<< HEAD
 User-agent: *
 Allow: /
 
+=======
+User-agent: *
+Allow: /
+
+>>>>>>> ab2efca88be85fb088aef6f3e2f51b2fa9fbcb58
 Sitemap: https://santehmaster-vrn.ru/sitemap.xml
