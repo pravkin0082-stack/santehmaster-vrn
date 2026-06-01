@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Сантехника</title>
+    <title>Услуги сантехника в Воронеже — ремонт и установка сантехники</title>
+
+    <meta
+      name="description"
+      content="Услуги сантехника в Воронеже. Замена смесителей, ремонт унитазов, устранение протечек, установка счетчиков воды. Выезд мастера по городу."
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -16,12 +21,75 @@
         font-family: Arial;
         background: #f5f5f5;
       }
+      header {
+        background: white;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-box {
+        width: 55px;
+        height: 55px;
+        background: #ffc107;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+      }
+
+      .logo-text h1 {
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .logo-text p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        gap: 40px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #ffc107;
+      }
+
+      .phone {
+        font-size: 26px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
 
       .container {
         width: 90%;
         max-width: 1200px;
         margin: auto;
-        padding: 50px 0;
       }
 
       h1 {
@@ -35,6 +103,9 @@
         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 30px;
       }
+      .gallery-page {
+        padding: 50px 0;
+      }
 
       .gallery img {
         width: 100%;
@@ -42,30 +113,161 @@
         height: 300px;
         object-fit: cover;
       }
+      .work-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .work-card p {
+        padding: 15px;
+        font-weight: bold;
+      }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Мои работы сантехника в Воронеже",
+        "description": "Примеры выполненных работ по установке и ремонту сантехники в Воронеже.",
+        "url": "https://santehmaster-vrn.ru/santehnika.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ImageObject",
+              "position": 1,
+              "name": "Установка бойлера",
+              "contentUrl": "https://santehmaster-vrn.ru/photo10.jpg"
+            },
+            {
+              "@type": "ImageObject",
+              "position": 2,
+              "name": "Установка бойлера",
+              "contentUrl": "https://santehmaster-vrn.ru/photo11.jpg"
+            },
+            {
+              "@type": "ImageObject",
+              "position": 3,
+              "name": "Установка бойлера",
+              "contentUrl": "https://santehmaster-vrn.ru/photo12.jpg"
+            },
+            {
+              "@type": "ImageObject",
+              "position": 4,
+              "name": "Монтаж системы водоснабжения",
+              "contentUrl": "https://santehmaster-vrn.ru/photo22.jpg"
+            }
+          ]
+        }
+      }
+    </script>
   </head>
 
   <body>
-    <div class="container">
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-box">🛠</div>
+
+          <div class="logo-text">
+            <h1>Сантехник в Воронеже</h1>
+          </div>
+        </div>
+        <nav>
+          <a href="index.html">На главную</a>
+        </nav>
+
+        <a href="tel:+79507542549" class="phone"> 📞 +7 (950) 754-25-49 </a>
+      </div>
+    </header>
+    <div class="container gallery-page">
       <h1>МОИ РАБОТЫ</h1>
 
+      <p style="text-align: center; font-size: 22px; color: #555">
+        Примеры выполненных работ по установке и ремонту сантехники в Воронеже.
+        Все фотографии реальные и сделаны после завершения работ.
+      </p>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: wrap;
+          margin-bottom: 50px;
+        "
+      >
+        <div>✅ 12 лет опыта</div>
+        <div>✅ Гарантия на работы</div>
+        <div>✅ Выезд в день обращения</div>
+        <div>✅ Без посредников</div>
+      </div>
+
       <div class="gallery">
-        <img src="photo10.jpg" />
+        <div class="work-card">
+          <img src="photo10.jpg" alt="Установка бойлера в Воронеже" />
+          <p>Установка бойлера</p>
+        </div>
 
-        <img src="photo11.jpg" />
+        <div class="work-card">
+          <img src="photo11.jpg" alt="Установка бойлера в Воронеже" />
+          <p>Установка бойлера</p>
+        </div>
 
-        <img src="photo12.jpg" />
+        <div class="work-card">
+          <img src="photo12.jpg" alt="Установка бойлера в Воронеже" />
+          <p>Установка бойлера</p>
+        </div>
 
-        <img src="photo13.jpg" />
+        <div class="work-card">
+          <img
+            src="photo22.jpg"
+            alt="Монтаж системы водоснабжения в Воронеже"
+          />
+          <p>Монтаж системы водоснабжения</p>
+        </div>
 
-        <img src="photo22.jpg" />
+        <div class="work-card">
+          <img
+            src="photo14.jpg"
+            alt="Монтаж труб канализации и труб подвода воды в Воронеже"
+          />
+          <p>Монтаж труб канализации и подвода воды</p>
+        </div>
 
-        <img src="photo14.jpg" />
+        <div class="work-card">
+          <img src="photo15.jpg" alt="Монтаж инсталяции в Воронеже" />
+          <p>Монтаж инсталяции</p>
+        </div>
 
-        <img src="photo15.jpg" />
-
-        <img src="photo16.jpg" />
+        <div class="work-card">
+          <img
+            src="photo16.jpg"
+            alt="Монтаж труб подвода воды в санузле в Воронеже"
+          />
+          <p>Монтаж труб подвода воды</p>
+        </div>
       </div>
     </div>
+    <section style="text-align: center; padding: 60px 0">
+      <h2>Нужен сантехник?</h2>
+
+      <p>Позвоните прямо сейчас и получите консультацию.</p>
+
+      <a href="tel:+79507542549" class="phone"> 📞 Позвонить мастеру </a>
+    </section>
+    <footer
+      style="
+        background: #000;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+      "
+    >
+      © 2026 Мастер сантехник — Все права защищены
+    </footer>
   </body>
 </html>

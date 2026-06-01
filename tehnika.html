@@ -4,7 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Установка сантехники</title>
+    <title>Подключение техники и сантехники в Воронеже</title>
+
+    <meta
+      name="description"
+      content="Подключение стиральных и посудомоечных машин, установка бойлеров, полотенцесушителей и радиаторов отопления в Воронеже."
+    />
     <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
@@ -16,11 +21,77 @@
         font-family: Arial;
         background: #f5f5f5;
       }
+      header {
+        background: white;
+        padding: 10px 0;
+        border-bottom: 1px solid #eee;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+      }
+
+      .header-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+      .logo {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+      }
+
+      .logo-box {
+        width: 55px;
+        height: 55px;
+        background: #ffc107;
+        border-radius: 12px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 30px;
+      }
+
+      .logo-text h1 {
+        font-size: 34px;
+        line-height: 1;
+      }
+
+      .logo-text p {
+        font-size: 18px;
+        font-weight: bold;
+      }
+
+      nav {
+        display: flex;
+        gap: 40px;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        color: #ffc107;
+      }
+
+      .phone {
+        font-size: 26px;
+        font-weight: bold;
+        text-decoration: none;
+        color: black;
+      }
 
       .container {
         width: 90%;
         max-width: 1200px;
         margin: auto;
+      }
+      .gallery-page {
         padding: 50px 0;
       }
 
@@ -42,24 +113,129 @@
         height: 300px;
         object-fit: cover;
       }
+      .work-card {
+        background: white;
+        border-radius: 20px;
+        overflow: hidden;
+        text-align: center;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      }
+
+      .work-card p {
+        padding: 15px;
+        font-weight: bold;
+      }
     </style>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "name": "Установка сантехники в Воронеже",
+        "description": "Примеры выполненных работ по установке и ремонту сантехники в Воронеже.",
+        "url": "https://santehmaster-vrn.ru/tehnika.html",
+        "mainEntity": {
+          "@type": "ItemList",
+          "itemListElement": [
+            {
+              "@type": "ImageObject",
+              "position": 1,
+              "name": "Установка полотенцесушителя",
+              "contentUrl": "https://santehmaster-vrn.ru/photo20.jpg"
+            },
+            {
+              "@type": "ImageObject",
+              "position": 2,
+              "name": "Установка ванны и раковины",
+              "contentUrl": "https://santehmaster-vrn.ru/photo18.jpg"
+            },
+            {
+              "@type": "ImageObject",
+              "position": 3,
+              "name": "Установка унитаза",
+              "contentUrl": "https://santehmaster-vrn.ru/photo19.jpg"
+            }
+          ]
+        }
+      }
+    </script>
   </head>
 
   <body>
-    <div class="container">
+    <header>
+      <div class="container header-content">
+        <div class="logo">
+          <div class="logo-box">🛠</div>
+
+          <div class="logo-text">
+            <h1>Сантехник в Воронеже</h1>
+          </div>
+        </div>
+        <nav>
+          <a href="index.html">На главную</a>
+        </nav>
+
+        <a href="tel:+79507542549" class="phone"> 📞 +7 (950) 754-25-49 </a>
+      </div>
+    </header>
+    <div class="container gallery-page">
       <h1>УСТАНОВКА САНТЕХНИКИ</h1>
 
+      <p style="text-align: center; font-size: 22px; color: #555">
+        Примеры выполненных работ по установке и ремонту сантехники в Воронеже.
+        Все фотографии реальные и сделаны после завершения работ.
+      </p>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 40px;
+          flex-wrap: wrap;
+          margin-bottom: 50px;
+        "
+      >
+        <div>✅ 12 лет опыта</div>
+        <div>✅ Гарантия на работы</div>
+        <div>✅ Выезд в день обращения</div>
+        <div>✅ Без посредников</div>
+      </div>
+
       <div class="gallery">
-        <img src="photo11.jpg" />
+        <div class="work-card">
+          <img src="photo20.jpg" alt="Установка полотенцесушителя в Воронеже" />
+          <p>Установка полотенцесушителя</p>
+        </div>
 
-        <img src="photo12.jpg" />
+        <div class="work-card">
+          <img
+            src="photo18.jpg"
+            alt="Установка ванной, установка раковины, установка зеркала в Воронеже."
+          />
+          <p>Установка ванны, раковины и зеркала</p>
+        </div>
 
-        <img src="photo20.jpg" />
-
-        <img src="photo18.jpg" />
-
-        <img src="photo19.jpg" />
+        <div class="work-card">
+          <img src="photo19.jpg" alt="Установка унитаза в Воронеже." />
+          <p>Установка унитаза</p>
+        </div>
       </div>
     </div>
+    <section style="text-align: center; padding: 60px 0">
+      <h2>Нужен сантехник?</h2>
+
+      <p>Позвоните прямо сейчас и получите консультацию.</p>
+
+      <a href="tel:+79507542549" class="phone"> 📞 Позвонить мастеру </a>
+    </section>
+    <footer
+      style="
+        background: #000;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 18px;
+      "
+    >
+      © 2026 Мастер сантехник — Все права защищены
+    </footer>
   </body>
 </html>
