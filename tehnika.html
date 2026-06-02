@@ -16,6 +16,11 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
       body {
         margin: 0;
         font-family: Arial;
@@ -124,6 +129,28 @@
       .work-card p {
         padding: 15px;
         font-weight: bold;
+      }
+      @media (max-width: 768px) {
+        .header-content {
+          flex-direction: column;
+          gap: 15px;
+        }
+
+        .logo-text h1 {
+          font-size: 24px;
+        }
+
+        nav a {
+          font-size: 16px;
+        }
+
+        .phone {
+          font-size: 20px;
+        }
+
+        h1 {
+          font-size: 34px;
+        }
       }
     </style>
     <script type="application/ld+json">
