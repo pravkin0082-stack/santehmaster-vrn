@@ -152,14 +152,43 @@
         padding: 15px;
         font-weight: bold;
       }
+      .site-title {
+        font-size: 34px;
+        font-weight: bold;
+      }
+      /* ===== Адаптация под телефоны ===== */
+
       @media (max-width: 768px) {
+        .container {
+          width: 95%;
+        }
+
+        header {
+          padding: 15px 0;
+        }
+
         .header-content {
           flex-direction: column;
+          text-align: center;
           gap: 15px;
         }
 
-        .logo-text h1 {
+        .logo {
+          justify-content: center;
+        }
+
+        .logo-box {
+          width: 45px;
+          height: 45px;
           font-size: 24px;
+        }
+
+        .logo-text h1 {
+          font-size: 22px;
+        }
+
+        nav {
+          gap: 15px;
         }
 
         nav a {
@@ -170,8 +199,82 @@
           font-size: 20px;
         }
 
-        h1 {
-          font-size: 34px;
+        h1,
+        h2 {
+          font-size: 32px !important;
+          margin-bottom: 25px;
+          line-height: 1.2;
+        }
+
+        section {
+          padding: 25px !important;
+        }
+
+        p {
+          font-size: 18px !important;
+        }
+
+        ul {
+          font-size: 18px !important;
+          padding-left: 20px !important;
+        }
+
+        .gallery {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+
+        .gallery img {
+          height: 240px;
+        }
+
+        .work-card p {
+          font-size: 16px;
+        }
+
+        div[style*="grid-template-columns"] {
+          grid-template-columns: 1fr !important;
+        }
+
+        a[href^="tel"] {
+          display: inline-block;
+          font-size: 22px !important;
+          padding: 15px 25px !important;
+        }
+      }
+
+      /* Маленькие телефоны */
+      @media (max-width: 480px) {
+        h1,
+        h2 {
+          font-size: 28px !important;
+        }
+
+        .logo-text h1 {
+          font-size: 20px;
+        }
+
+        .phone {
+          font-size: 18px;
+        }
+
+        p,
+        ul {
+          font-size: 16px !important;
+        }
+
+        section {
+          padding: 20px !important;
+        }
+
+        .gallery img {
+          height: 200px;
+        }
+
+        a[href^="tel"] {
+          width: 100%;
+          text-align: center;
+          font-size: 20px !important;
         }
       }
     </style>
@@ -226,7 +329,7 @@
           <div class="logo-box">🛠</div>
 
           <div class="logo-text">
-            <h1>Сантехник в Воронеже</h1>
+            <div class="site-title">Сантехник в Воронеже</div>
           </div>
         </div>
         <nav>
@@ -237,7 +340,7 @@
       </div>
     </header>
     <div class="container gallery-page">
-      <h2>Подключение техники и установка сантехники в Воронеже</h2>
+      <h1>Подключение техники и установка сантехники в Воронеже</h1>
 
       <section
         style="
