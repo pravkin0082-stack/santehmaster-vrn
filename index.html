@@ -28,6 +28,7 @@
     />
     <meta name="robots" content="index, follow" />
     <meta name="author" content="Александр" />
+    <link rel="stylesheet" href="css/style.css" />
     <title>
       Сантехник в Воронеже — ремонт и установка сантехники, выезд мастера
     </title>
@@ -37,357 +38,7 @@
     <link rel="manifest" href="site.webmanifest" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="canonical" href="https://santehmaster-vrn.ru/" />
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
 
-      body {
-        font-family: Arial, sans-serif;
-        background: #fff;
-        color: #111;
-      }
-
-      .container {
-        width: 90%;
-        max-width: 1400px;
-        margin: auto;
-      }
-
-      header {
-        background: white;
-        padding: 20px 0;
-        border-bottom: 1px solid #eee;
-        position: sticky;
-        top: 0;
-        z-index: 100;
-      }
-
-      .header-content {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-wrap: wrap;
-      }
-
-      .logo {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-      }
-
-      .logo-box {
-        width: 55px;
-        height: 55px;
-        background: #ffc107;
-        border-radius: 12px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 30px;
-      }
-
-      .logo-text h1 {
-        font-size: 34px;
-        line-height: 1;
-      }
-
-      .logo-text p {
-        font-size: 18px;
-        font-weight: bold;
-      }
-
-      nav {
-        display: flex;
-        gap: 40px;
-      }
-
-      nav a {
-        text-decoration: none;
-        color: black;
-        font-size: 20px;
-        font-weight: bold;
-      }
-
-      nav a:hover {
-        color: #ffc107;
-      }
-
-      .phone {
-        font-size: 26px;
-        font-weight: bold;
-        text-decoration: none;
-        color: black;
-      }
-
-      .hero {
-        padding: 40px 0;
-      }
-
-      .hero-content {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        gap: 50px;
-        flex-wrap: wrap;
-      }
-
-      .hero-image {
-        flex: 1;
-        min-width: 320px;
-      }
-
-      .hero-image img {
-        width: 100%;
-        border-radius: 20px;
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
-      }
-
-      .hero-text {
-        flex: 1;
-        min-width: 320px;
-      }
-
-      .badge {
-        display: inline-block;
-        background: #ffc107;
-        padding: 12px 22px;
-        border-radius: 30px;
-        font-weight: bold;
-        margin-bottom: 25px;
-        font-size: 18px;
-      }
-
-      .hero-text h1 {
-        font-size: 30px;
-        line-height: 1.2;
-        font-weight: 900;
-        margin-bottom: 25px;
-      }
-      .hero-text h1 span {
-        display: inline-block;
-      }
-
-      .yellow {
-        color: #ffc107;
-      }
-
-      .subtitle {
-        font-size: 26px;
-        margin-bottom: 30px;
-        color: #444;
-      }
-
-      .description {
-        font-size: 24px;
-        line-height: 1.6;
-        color: #555;
-        margin-bottom: 40px;
-      }
-
-      .buttons {
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        margin-bottom: 40px;
-      }
-
-      .btn {
-        padding: 22px 40px;
-        border-radius: 14px;
-        font-size: 22px;
-        font-weight: bold;
-        text-decoration: none;
-        transition: 0.3s;
-        display: inline-block;
-        border: none;
-        cursor: pointer;
-      }
-
-      .btn-yellow {
-        background: #ffc107;
-        color: black;
-        box-shadow: 0 8px 20px rgba(255, 193, 7, 0.4);
-      }
-
-      .btn-yellow:hover {
-        background: #ffcd38;
-        transform: translateY(-2px);
-      }
-      .btn:active {
-        transform: scale(0.98);
-      }
-
-      .advantages {
-        display: flex;
-        gap: 50px;
-        flex-wrap: wrap;
-        margin-top: 30px;
-      }
-
-      .advantage {
-        display: flex;
-        align-items: center;
-        gap: 15px;
-        font-size: 22px;
-      }
-
-      .advantage span {
-        font-size: 40px;
-      }
-
-      .services-section {
-        padding: 100px 0;
-        background: #fafafa;
-      }
-
-      .section-title {
-        text-align: center;
-        font-size: 60px;
-        margin-bottom: 20px;
-        font-weight: 900;
-      }
-
-      .section-subtitle {
-        text-align: center;
-        font-size: 24px;
-        color: #666;
-        margin-bottom: 60px;
-      }
-
-      .services {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 30px;
-      }
-
-      .service-card {
-        background: white;
-        border-radius: 20px;
-        padding: 40px 30px;
-        border: 1px solid #eee;
-        transition: 0.3s;
-      }
-
-      .service-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-      }
-
-      .service-icon {
-        font-size: 50px;
-        margin-bottom: 20px;
-      }
-      .service-icon img {
-        width: 70px;
-        height: 70px;
-        object-fit: contain;
-      }
-
-      .service-card h3 {
-        font-size: 30px;
-        margin-bottom: 20px;
-      }
-
-      .service-card p {
-        font-size: 20px;
-        line-height: 1.6;
-        color: #555;
-      }
-
-      .review-card {
-        background: white;
-        padding: 30px;
-        border-radius: 20px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-      }
-      .call-button {
-        position: fixed;
-        right: 20px;
-        bottom: 20px;
-        width: 55px;
-        height: 55px;
-        background: #ffc107;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        font-size: 28px;
-        text-decoration: none;
-        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
-        z-index: 999;
-      }
-
-      @media (max-width: 900px) {
-        .hero-text h2 {
-          font-size: 52px;
-        }
-
-        nav {
-          gap: 20px;
-        }
-
-        nav a {
-          font-size: 16px;
-        }
-
-        .phone {
-          margin-top: 20px;
-          font-size: 20px;
-        }
-
-        .section-title {
-          font-size: 42px;
-        }
-      }
-      @media (max-width: 700px) {
-        .header-content {
-          flex-direction: column;
-          gap: 20px;
-        }
-
-        nav {
-          flex-wrap: wrap;
-          justify-content: center;
-        }
-
-        .hero-text h1 {
-          font-size: 42px;
-        }
-
-        .description,
-        .subtitle {
-          font-size: 20px;
-        }
-
-        .btn {
-          width: 100%;
-          text-align: center;
-        }
-      }
-
-      @media (max-width: 700px) {
-        #price div[style*="background: #fff"] {
-          padding: 20px !important;
-          font-size: 18px !important;
-        }
-
-        #price h3 {
-          font-size: 24px;
-          margin-bottom: 15px;
-        }
-
-        #price p {
-          font-size: 17px;
-          line-height: 1.6;
-        }
-      }
-    </style>
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -433,7 +84,6 @@
           <a href="/">Главная</a>
           <a href="#about">О мастере</a>
           <a href="#services">Услуги</a>
-          <a href="santehnika.html">Мои работы</a>
           <a href="#price">Прайс</a>
           <a href="#reviews">Отзывы</a>
           <a href="#contacts">Контакты</a>
@@ -504,52 +154,44 @@
       </div>
     </section>
     <section id="about" style="padding: 70px 0; background: #fff">
-      <div
-        class="container"
-        style="max-width: 900px; margin: auto; text-align: center"
-      >
-        <h2 style="font-size: 42px; margin-bottom: 25px; text-align: center">
+      <div class="container">
+        <h2 style="font-size: 42px; margin-bottom: 50px; text-align: center">
           О мастере
         </h2>
 
-        <p
-          style="
-            font-size: 24px;
-            line-height: 1.8;
-            color: #444;
-            text-align: center;
-          "
-        >
-          Меня зовут <strong style="color: #000000">Александр</strong>, на вызов
-          приезжаю только я.
-          <strong style="color: #000000">Опыт 12 лет</strong> — знаю тонкости и
-          «подводные камни» каждой задачи. Работаю по Воронежу. Выезжаю на дом в
-          любой район города: Коминтерновский, Советский, Ленинский и др.
-        </p>
+        <div class="about-content">
+          <div class="about-image">
+            <img
+              src="images/master-photo.jpg"
+              alt="Александр - мастер сантехник в Воронеже"
+            />
+          </div>
 
-        <p
-          style="
-            font-size: 24px;
-            line-height: 1.8;
-            color: #444;
-            margin-top: 20px;
-            text-align: center;
-          "
-        >
-          Я <strong style="color: #e60000">❗️НЕ СОТРУДНИЧАЮ❗️</strong> с
-          посредниками и другими сторонними организациями.
-        </p>
+          <div class="about-text">
+            <p>
+              Меня зовут <strong>Александр</strong>, на вызов приезжаю только я.
+            </p>
 
-        <p
-          style="
-            font-size: 20px;
-            margin-top: 20px;
-            color: #666;
-            text-align: center;
-          "
-        >
-          Вы общаетесь напрямую с мастером — без диспетчеров и переплат.
-        </p>
+            <p>
+              <strong>Опыт 12 лет</strong> — знаю тонкости и «подводные камни»
+              каждой задачи.
+            </p>
+
+            <p>
+              Работаю по Воронежу. Выезжаю на дом в любой район города:
+              Коминтерновский, Советский, Ленинский и др.
+            </p>
+
+            <p class="highlight">
+              Я <strong>НЕ СОТРУДНИЧАЮ</strong> с посредниками и другими
+              сторонними организациями.
+            </p>
+
+            <p class="subtitle">
+              Вы общаетесь напрямую с мастером — без диспетчеров и переплат.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -591,75 +233,53 @@
         </div>
 
         <div class="services">
-          <a
-            href="santehnika.html"
-            style="text-decoration: none; color: inherit"
-          >
-            <div class="service-card">
-              <div class="service-icon">🚰</div>
-
-              <h3>Услуги сантехника в Воронеже</h3>
-              <ul>
-                <li>
-                  <strong>
-                    Установка и ремонт сантехники любой сложности в
-                    Воронеже.</strong
-                  >
-                </li>
-
-                <li><strong>Ремонт и замена СМЕСИТЕЛЯ.</strong></li>
-
-                <li><strong>Ремонт и замена УНИТАЗА.</strong></li>
-
-                <li><strong>Замена СЧЕТЧИКОВ водоснабжения.</strong></li>
-
-                <li><strong>Замена ШАРОВЫХ кранов .</strong></li>
-
-                <li>
-                  <strong>Замена РЕГУЛЯТОРОВ давления водоснабжения.</strong>
-                </li>
-
-                <li><strong>Устранение ТЕЧИ.</strong></li>
-              </ul>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="images/free-icon-water-pipe-1566270.png" alt="Ключ" />
             </div>
-          </a>
+            <h3>Услуги сантехника в Воронеже</h3>
+            <ul>
+              <li>
+                <strong
+                  >Установка и ремонт сантехники любой сложности в
+                  Воронеже.</strong
+                >
+              </li>
+              <li><strong>Ремонт и замена СМЕСИТЕЛЯ.</strong></li>
+              <li><strong>Ремонт и замена УНИТАЗА.</strong></li>
+              <li><strong>Замена СЧЕТЧИКОВ водоснабжения.</strong></li>
+              <li><strong>Замена ШАРОВЫХ кранов.</strong></li>
+              <li>
+                <strong>Замена РЕГУЛЯТОРОВ давления водоснабжения.</strong>
+              </li>
+              <li><strong>Устранение ТЕЧИ.</strong></li>
+            </ul>
+            <a href="santehnika.html" class="service-btn">Подробнее →</a>
+          </div>
 
-          <a href="tehnika.html" style="text-decoration: none; color: inherit">
-            <div class="service-card">
-              <div class="service-icon">
-                <img src="unitaz.png" alt="Унитаз" />
-              </div>
-
-              <h3>Установка и замена любой сантехники в Воронеже</h3>
-              <ul>
-                <li>
-                  <strong
-                    >Подключение СТИРАЛЬНОЙ И ПОСУДОМОЕЧНОЙ машины.</strong
-                  >
-                </li>
-
-                <li><strong>Установка и подключение БОЙЛЕРА.</strong></li>
-
-                <li><strong>Установка ПОЛОТЕНЦЕСУШИТЕЛЯ .</strong></li>
-
-                <li>
-                  <strong>
-                    Установка и подключение РАДИАТОРОВ ОТОПЛЕНИЯ.</strong
-                  >
-                </li>
-
-                <li>
-                  <strong> Монтирую и ремонтирую полотенцесушители.</strong>
-                </li>
-
-                <li>
-                  <strong
-                    >Выполняю разводку труб водоснабжения и канализации.</strong
-                  >
-                </li>
-              </ul>
+          <div class="service-card">
+            <div class="service-icon">
+              <img src="images/unitaz.png" alt="Унитаз" />
             </div>
-          </a>
+            <h3>Установка и замена любой сантехники в Воронеже</h3>
+            <ul>
+              <li>
+                <strong>Подключение СТИРАЛЬНОЙ И ПОСУДОМОЕЧНОЙ машины.</strong>
+              </li>
+              <li><strong>Установка и подключение БОЙЛЕРА.</strong></li>
+              <li><strong>Установка ПОЛОТЕНЦЕСУШИТЕЛЯ.</strong></li>
+              <li>
+                <strong>Установка и подключение РАДИАТОРОВ ОТОПЛЕНИЯ.</strong>
+              </li>
+              <li><strong>Монтирую и ремонтирую полотенцесушители.</strong></li>
+              <li>
+                <strong
+                  >Выполняю разводку труб водоснабжения и канализации.</strong
+                >
+              </li>
+            </ul>
+            <a href="tehnika.html" class="service-btn">Подробнее →</a>
+          </div>
         </div>
       </div>
     </section>
