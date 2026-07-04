@@ -577,3 +577,20 @@ nav a:hover {
     line-height: 1.6;
   }
 }
+/* Жесткое правило для плавающей кнопки на мобильных */
+@media (max-width: 768px) {
+  .call-button {
+    width: 55px !important;
+    height: 55px !important;
+    min-width: 55px !important;
+    max-width: 55px !important;
+    border-radius: 50% !important; /* Делает её строго круглой */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    right: 15px !important;
+    bottom: 15px !important;
+  }
+}
