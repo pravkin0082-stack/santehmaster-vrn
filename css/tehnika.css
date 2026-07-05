@@ -436,365 +436,339 @@ h2 {
 }
 
 /* ========================================
+   АДАПТАЦИЯ СТРАНИЦЫ TEHNIKA.HTML
+   ======================================== */
+
+/* ========================================
    ПЛАНШЕТЫ (до 1024px)
    ======================================== */
 @media (max-width: 1024px) {
-  .about-content {
-    gap: 40px;
+  .gallery-page h1 {
+    font-size: 36px;
+    text-align: center;
   }
 
-  .about-image {
-    flex: 0 0 300px;
+  .works-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
   }
 
-  .about-image img {
-    height: 400px;
-  }
-
-  .about-text p {
-    font-size: 20px;
-  }
-
-  .about-text p.highlight {
-    font-size: 22px;
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* ========================================
-   МАЛЕНЬКИЕ ПЛАНШЕТЫ (до 900px)
+   МОБИЛЬНЫЕ УСТРОЙСТВА (до 768px)
    ======================================== */
-@media (max-width: 900px) {
-  html {
-    scroll-padding-top: 160px;
+@media (max-width: 768px) {
+  /* --- ЗАГОЛОВОК H1 --- */
+  .gallery-page h1 {
+    font-size: 28px;
+    text-align: center;
+    line-height: 1.3;
+    margin-bottom: 30px;
   }
 
-  .hero-text h2 {
-    font-size: 52px;
+  /* --- СЕКЦИИ С БЕЛЫМ ФОНОМ --- */
+  .gallery-page section[style*="background: white"] {
+    padding: 25px 20px !important;
+    margin-bottom: 30px !important;
   }
 
-  nav {
+  .gallery-page section[style*="background: white"] p {
+    font-size: 17px !important;
+    line-height: 1.6 !important;
+  }
+
+  /* --- СЕКЦИЯ С ПРЕИМУЩЕСТВАМИ (желтый фон) --- */
+  .gallery-page section[style*="background: #fff8e1"] {
+    padding: 25px 20px !important;
+    margin-bottom: 30px !important;
+  }
+
+  .gallery-page section[style*="background: #fff8e1"] h2 {
+    font-size: 28px !important;
+    text-align: center;
+    margin-bottom: 20px !important;
+  }
+
+  .gallery-page
+    section[style*="background: #fff8e1"]
+    div[style*="grid-template-columns"] {
+    grid-template-columns: 1fr !important;
+    gap: 15px !important;
+    margin-top: 20px !important;
+  }
+
+  .gallery-page section[style*="background: #fff8e1"] div > div {
+    font-size: 17px;
+    padding: 12px 15px;
+    background: #fff;
+    border-radius: 10px;
+  }
+
+  /* --- СЕКЦИЯ УСЛУГ (WORKS-SECTION) --- */
+  .works-section {
+    padding: 30px 0;
+  }
+
+  .works-section .section-title {
+    font-size: 28px;
+    text-align: center;
+  }
+
+  .works-section .section-subtitle {
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .works-grid {
+    grid-template-columns: 1fr !important;
     gap: 20px;
   }
 
-  nav a {
-    font-size: 16px;
+  .works-category {
+    padding: 20px;
   }
 
-  .phone {
-    margin-top: 20px;
+  .category-header {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+  }
+
+  .category-icon {
+    font-size: 28px;
+  }
+
+  .category-header h3 {
     font-size: 20px;
+    margin: 0;
   }
 
-  .section-title {
-    font-size: 42px;
-  }
-}
-
-/* ========================================
-   МОБИЛЬНЫЕ УСТРОЙСТВА (до 768px) — ОСНОВНОЙ БРЕЙКПОИНТ
-   ======================================== */
-@media (max-width: 768px) {
-  /* --- HEADER --- */
-  header {
-    padding: 10px 0;
+  .works-list {
+    padding-left: 0;
   }
 
-  .header-content {
-    padding: 10px 15px;
+  .works-list li {
+    font-size: 16px;
+    padding: 8px 0;
+    display: flex;
+    align-items: center;
     gap: 10px;
   }
 
-  .logo-box {
+  .works-list .check {
+    font-size: 18px;
+    flex-shrink: 0;
+  }
+
+  /* --- ПРИЗЫВ К ДЕЙСТВИЮ (WORKS-CTA) --- */
+  .works-cta {
+    text-align: center;
+    margin-top: 30px;
+    padding: 25px;
+    background: #f5f5f5;
+    border-radius: 15px;
+  }
+
+  .works-cta p {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .works-cta .btn {
+    display: block;
+    width: 100%;
+    padding: 16px 20px;
+    font-size: 18px;
+  }
+
+  /* --- ГАЛЕРЕЯ РАБОТ --- */
+  .gallery-page section[style*="margin-bottom: 60px"] h2 {
+    font-size: 26px;
+    text-align: center;
+    margin-bottom: 25px;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr !important;
+    gap: 20px;
+  }
+
+  .work-card {
+    padding: 15px;
+  }
+
+  .work-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 12px;
+  }
+
+  .work-card p {
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  /* --- СЕКЦИЯ РАЙОНОВ --- */
+  .gallery-page section[style*="background: white"] h2 {
     font-size: 24px;
-    width: 40px;
-    height: 40px;
+    text-align: center;
+    margin-bottom: 15px;
   }
 
-  .logo-text h1 {
+  /* --- FAQ СЕКЦИЯ --- */
+  .faq-section {
+    padding: 30px 0;
+  }
+
+  .faq-section .section-title {
+    font-size: 26px;
+    text-align: center;
+  }
+
+  .faq-section .section-subtitle {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .faq-list {
+    gap: 12px;
+  }
+
+  .faq-item {
+    border-radius: 12px;
+  }
+
+  .faq-question {
+    padding: 15px 18px;
+  }
+
+  .faq-question h3 {
     font-size: 16px;
-    margin: 0;
-    line-height: 1.2;
+    line-height: 1.4;
+    padding-right: 30px;
   }
 
-  .logo-text p {
-    font-size: 11px;
-    margin: 2px 0 0 0;
+  .faq-icon {
+    font-size: 24px;
+    top: 15px;
+    right: 15px;
+  }
+
+  .faq-answer {
+    padding: 0 18px 15px 18px;
+  }
+
+  .faq-answer p {
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  /* --- CTA СЕКЦИЯ (желтый фон) --- */
+  .gallery-page section[style*="background: #ffc107"] {
+    padding: 30px 20px !important;
+    margin: 30px 0 !important;
+  }
+
+  .gallery-page section[style*="background: #ffc107"] h2 {
+    font-size: 24px !important;
+    margin-bottom: 15px !important;
     line-height: 1.3;
   }
 
-  .logo-text p:nth-of-type(2) {
-    display: none;
+  .gallery-page section[style*="background: #ffc107"] p {
+    font-size: 17px !important;
+    margin-bottom: 20px !important;
   }
 
-  .phone {
-    font-size: 14px;
-    padding: 8px 12px;
-  }
-
-  /* --- БУРГЕР --- */
-  .burger {
-    display: flex;
-    width: 26px;
-    height: 20px;
-  }
-
-  .burger span {
-    height: 2.5px;
-  }
-
-  /* --- МОБИЛЬНОЕ МЕНЮ --- */
-  nav {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 80%;
-    height: 100vh;
-    background: #1a1a1a;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    transition: right 0.3s;
-    z-index: 1000;
-    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
-    padding: 60px 20px 20px;
-  }
-
-  nav.active {
-    right: 0;
-  }
-
-  nav a {
-    color: #ffffff !important;
-    font-size: 20px;
-    font-weight: 500;
-    text-decoration: none;
-    padding: 12px 20px;
-    width: 100%;
-    text-align: center;
-    border-bottom: 1px solid #333;
-    transition: color 0.2s;
-  }
-
-  nav a:hover,
-  nav a:active {
-    color: #ffc107;
-  }
-
-  /* --- СЕКЦИЯ "О МАСТЕРЕ" --- */
-  .about-content {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .about-image {
-    flex: none;
+  .gallery-page section[style*="background: #ffc107"] a {
+    display: block;
+    padding: 16px 25px !important;
+    font-size: 20px !important;
     width: 100%;
     max-width: 350px;
     margin: 0 auto;
   }
+}
 
-  .about-image img {
-    height: 350px;
+/* ========================================
+   УЗКИЕ МОБИЛЬНЫЕ ЭКРАНЫ (до 480px)
+   ======================================== */
+@media (max-width: 480px) {
+  .gallery-page h1 {
+    font-size: 24px;
   }
 
-  .about-text {
-    text-align: center;
+  .gallery-page section[style*="background: white"] p {
+    font-size: 16px !important;
   }
 
-  .about-text p {
-    font-size: 18px;
-    line-height: 1.7;
+  .gallery-page section[style*="background: #fff8e1"] h2 {
+    font-size: 24px !important;
   }
 
-  .about-text p.highlight {
-    font-size: 20px;
-    text-align: left;
-  }
-
-  .about-text p.subtitle {
-    font-size: 18px;
-  }
-
-  /* --- КНОПКИ УСЛУГ --- */
-  .service-btn {
-    width: 100%;
-    text-align: center;
-    padding: 18px 30px;
+  .gallery-page section[style*="background: #fff8e1"] div > div {
     font-size: 16px;
   }
 
-  /* --- ПЛАВАЮЩАЯ КНОПКА ЗВОНКА --- */
-  .call-button {
-    width: 55px !important;
-    height: 55px !important;
-    min-width: 55px !important;
-    max-width: 55px !important;
-    border-radius: 50% !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    padding: 0 !important;
-    margin: 0 !important;
-    right: 15px !important;
-    bottom: 85px !important; /* выше липких кнопок */
-  }
-
-  /* --- ЛИПКИЕ КНОПКИ СВЯЗИ --- */
-  .sticky-buttons {
-    display: grid;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: #111;
-    padding: 10px;
-    z-index: 9999;
-    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-  }
-
-  .sticky-buttons a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 14px 10px;
-    border-radius: 10px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 14px;
-    text-align: center;
-    transition: transform 0.2s;
-  }
-
-  .sticky-buttons a:active {
-    transform: scale(0.95);
-  }
-
-  .sticky-call {
-    background: #ffc107;
-    color: #000;
-  }
-
-  .sticky-max {
-    background: #0077ff;
-    color: #fff;
-  }
-
-  .sticky-map {
-    background: #4caf50;
-    color: #fff;
-  }
-
-  body {
-    padding-bottom: 80px;
-  }
-}
-
-/* ========================================
-   УЗКИЕ МОБИЛЬНЫЕ ЭКРАНЫ (до 700px)
-   ======================================== */
-@media (max-width: 700px) {
-  html {
-    scroll-padding-top: 220px;
-  }
-
-  /* --- HEADER В КОЛОНКУ --- */
-  .header-content {
-    flex-direction: column;
-    gap: 15px;
-  }
-
-  nav {
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-
-  /* --- HERO-БЛОК --- */
-  .hero-text h1 {
-    font-size: 42px;
-  }
-
-  .description,
-  .subtitle {
-    font-size: 20px;
-  }
-
-  .btn {
-    width: 100%;
-    text-align: center;
-  }
-
-  /* --- ПРАЙС --- */
-  #price div[style*="background: #fff"] {
-    padding: 20px !important;
-    font-size: 18px !important;
-  }
-
-  #price h3 {
+  .works-section .section-title {
     font-size: 24px;
-    margin-bottom: 15px;
   }
 
-  #price p {
-    font-size: 17px;
-    line-height: 1.6;
-  }
-}
-
-/* ========================================
-   МАЛЕНЬКИЕ ТЕЛЕФОНЫ (до 480px)
-   ======================================== */
-@media (max-width: 480px) {
-  header {
-    padding: 8px 0;
+  .category-header h3 {
+    font-size: 18px;
   }
 
-  .header-content {
-    padding: 8px 12px;
+  .works-list li {
+    font-size: 15px;
   }
 
-  .logo-box {
-    font-size: 20px;
-    width: 35px;
-    height: 35px;
+  .works-cta p {
+    font-size: 16px;
   }
 
-  .logo-text h1 {
+  .works-cta .btn {
+    font-size: 16px;
+    padding: 14px 18px;
+  }
+
+  .gallery-page section[style*="margin-bottom: 60px"] h2 {
+    font-size: 22px;
+  }
+
+  .work-card p {
     font-size: 14px;
   }
 
-  .logo-text p {
-    font-size: 10px;
+  .faq-section .section-title {
+    font-size: 22px;
   }
 
-  .phone {
-    font-size: 12px;
-    padding: 6px 10px;
+  .faq-question h3 {
+    font-size: 15px;
   }
 
-  .burger {
-    width: 24px;
-    height: 18px;
+  .faq-answer p {
+    font-size: 14px;
   }
 
-  .hero-text h1 {
-    font-size: 32px;
+  .gallery-page section[style*="background: #ffc107"] h2 {
+    font-size: 20px !important;
   }
 
-  .description,
-  .subtitle {
-    font-size: 17px;
+  .gallery-page section[style*="background: #ffc107"] p {
+    font-size: 16px !important;
   }
 
-  .section-title {
-    font-size: 28px;
-  }
-
-  .sticky-buttons a {
-    font-size: 12px;
-    padding: 12px 8px;
+  .gallery-page section[style*="background: #ffc107"] a {
+    font-size: 18px !important;
+    padding: 14px 20px !important;
   }
 }
