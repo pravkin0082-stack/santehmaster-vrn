@@ -599,65 +599,7 @@ nav a:hover {
   }
 }
 
-/* Липкие кнопки для мобильных */
-.sticky-buttons {
-  display: none;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #111;
-  padding: 10px;
-  z-index: 9999;
-  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
-  grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
-}
-
-.sticky-buttons a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 14px 10px;
-  border-radius: 10px;
-  text-decoration: none;
-  font-weight: bold;
-  font-size: 14px;
-  text-align: center;
-  transition: transform 0.2s;
-}
-
-.sticky-buttons a:active {
-  transform: scale(0.95);
-}
-
-.sticky-call {
-  background: #ffc107;
-  color: #000;
-}
-
-.sticky-max {
-  background: #0077ff;
-  color: #fff;
-}
-
-.sticky-map {
-  background: #4caf50;
-  color: #fff;
-}
-
-/* Показываем только на мобильных */
-@media (max-width: 768px) {
-  .sticky-buttons {
-    display: grid;
-  }
-
-  body {
-    padding-bottom: 70px; /* чтобы футер не перекрывался */
-  }
-}
-
-/* Бургер-меню */
+/* Бургер-кнопка */
 .burger {
   display: none;
   flex-direction: column;
@@ -665,7 +607,7 @@ nav a:hover {
   width: 30px;
   height: 22px;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 1001; /* выше, чем выезжающее меню */
 }
 
 .burger span {
@@ -686,6 +628,7 @@ nav a:hover {
   transform: rotate(-45deg) translate(6px, -6px);
 }
 
+/* Мобильное меню */
 @media (max-width: 768px) {
   .burger {
     display: flex;
@@ -695,14 +638,18 @@ nav a:hover {
     position: fixed;
     top: 0;
     right: -100%;
-    width: 70%;
+    width: 80%;
     height: 100vh;
-    background: #111;
+    background: #1a1a1a;
+    display: flex; /* 👈 ОБЯЗАТЕЛЬНО: включает вертикальную раскладку */
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 20px;
     transition: right 0.3s;
-    z-index: 999;
+    z-index: 1000;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    padding: 60px 20px 20px; /* отступ сверху, чтобы не наезжать на шапку */
   }
 
   nav.active {
@@ -710,7 +657,19 @@ nav a:hover {
   }
 
   nav a {
+    color: #ffffff !important; /* 👈 Жёстко задаём белый цвет */
     font-size: 20px;
-    margin: 15px 0;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 12px 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #333;
+    transition: color 0.2s;
+  }
+
+  nav a:hover,
+  nav a:active {
+    color: #ffc107;
   }
 }
