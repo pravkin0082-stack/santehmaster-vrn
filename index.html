@@ -42,19 +42,39 @@
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "Сантехник в Воронеже",
+        "@type": "Plumber",
+        "name": "Сантехник в Воронеже — частный мастер Александр",
         "image": "https://santehmaster-vrn.ru/b9dc294d-be9d-4b53-9476-0d96540d8d34.jpg",
         "url": "https://santehmaster-vrn.ru",
         "telephone": "+79507542549",
+        "email": "sander54828589@mail.ru",
+        "priceRange": "1000-20000 RUB",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Воронеж",
+          "addressRegion": "Воронежская область",
           "addressCountry": "RU"
         },
-        "areaServed": "Воронеж",
-        "description": "Установка и ремонт сантехники в Воронеже. Выезд мастера на дом.",
-        "priceRange": "1000-5000 RUB"
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": "51.6683",
+          "longitude": "39.1784"
+        },
+        "areaServed": [
+          { "@type": "City", "name": "Воронеж" },
+          { "@type": "Place", "name": "Коминтерновский район" },
+          { "@type": "Place", "name": "Советский район" },
+          { "@type": "Place", "name": "Левобережный район" },
+          { "@type": "Place", "name": "Центральный район" },
+          { "@type": "Place", "name": "Железнодорожный район" }
+        ],
+        "openingHours": "Mo-Su 08:00-22:00",
+        "description": "Частный сантехник в Воронеже. 12 лет опыта. Установка и ремонт сантехники, устранение засоров, замена смесителей и унитазов. Выезд в день обращения.",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "5",
+          "reviewCount": "47"
+        }
       }
     </script>
   </head>
@@ -79,6 +99,11 @@
             <p>частный мастер</p>
             <p>выезд по всему Воронежу</p>
           </div>
+        </div>
+        <div class="burger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
         <nav>
           <a href="/">Главная</a>
@@ -112,8 +137,8 @@
           <div class="badge">РЕШУ ЛЮБУЮ ПРОБЛЕМУ</div>
 
           <h1>
-            МАСТЕР САНТЕХНИК В ВОРОНЕЖЕ<br />
-            <span class="yellow">РЕМОНТ, УСТАНОВКА И ЗАМЕНА САНТЕХНИКИ</span>
+            УСЛУГИ САНТЕХНИКА В ВОРОНЕЖЕ<br />
+            <span class="yellow">Частный мастер Александр — 12 лет опыта</span>
           </h1>
 
           <div class="subtitle">Быстро. Качественно. Надёжно.</div>
@@ -227,8 +252,15 @@
           <p>Бесплатная диагностика при заказе ремонта.</p>
 
           <strong style="color: #000000"
-            >Поэтому предлагаю Вам связаться со мной по телефону, в мессенджере
-            МАКС или в личные сообщения ВК.</strong
+            >Поэтому предлагаю Вам связаться со мной по
+            <a href="tel:+79507542549">телефону</a>, в мессенджере
+            <a
+              href="https://max.ru/u/f9LHodD0cOLFTzofiPfg1xkm-Vz_ox9JEG92-BlYmTcTkzZdpzP6lUhtj6s"
+              target="_blank"
+              >Макс</a
+            >
+            или в личные сообщения
+            <a href="https://vk.ru/id789050101" target="_blank">ВК.</a></strong
           >
         </div>
 
@@ -576,13 +608,46 @@
         background: #000;
         color: white;
         text-align: center;
-        padding: 20px;
-        font-size: 18px;
+        padding: 30px 20px;
+        font-size: 16px;
       "
     >
-      © 2026 Мастер сантехник — Все права защищены
+      <p style="margin-bottom: 10px">
+        © 2026 Мастер сантехник — Все права защищены
+      </p>
+
+      <p style="font-size: 14px; color: #aaa">
+        <a href="/privacy.html" style="color: #ffc107; text-decoration: none"
+          >Политика конфиденциальности</a
+        >
+      </p>
     </footer>
     <a href="tel:+79507542549" class="call-button">📞</a>
+
+    <div class="sticky-buttons">
+      <a
+        href="tel:+79507542549"
+        class="sticky-call"
+        onclick="ym(109697206, 'reachGoal', 'sticky_call')"
+      >
+        📞 Позвонить
+      </a>
+      <a
+        href="https://max.ru/u/f9LHodD0cOLFTzofiPfg1xkm-Vz_ox9JEG92-BlYmTcTkzZdpzP6lUhtj6s"
+        target="_blank"
+        class="sticky-max"
+        onclick="ym(109697206, 'reachGoal', 'sticky_max')"
+      >
+        💬 Написать
+      </a>
+      <a
+        href="https://yandex.ru/maps/?text=Сантехник+Воронеж"
+        target="_blank"
+        class="sticky-map"
+      >
+        📍 Маршрут
+      </a>
+    </div>
     <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
@@ -630,5 +695,19 @@
         /></div
     ></noscript>
     <!-- /Yandex.Metrika counter -->
+    <script>
+      function toggleMenu() {
+        document.querySelector(".burger").classList.toggle("active");
+        document.querySelector("nav").classList.toggle("active");
+      }
+
+      // Закрываем меню при клике на ссылку
+      document.querySelectorAll("nav a").forEach((link) => {
+        link.addEventListener("click", () => {
+          document.querySelector(".burger").classList.remove("active");
+          document.querySelector("nav").classList.remove("active");
+        });
+      });
+    </script>
   </body>
 </html>

@@ -314,6 +314,10 @@ nav a:hover {
   margin-bottom: 60px;
 }
 
+.section-subtitle a {
+  text-decoration: none;
+}
+
 .services {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -592,5 +596,121 @@ nav a:hover {
     margin: 0 !important;
     right: 15px !important;
     bottom: 15px !important;
+  }
+}
+
+/* Липкие кнопки для мобильных */
+.sticky-buttons {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  padding: 10px;
+  z-index: 9999;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.sticky-buttons a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 14px;
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.sticky-buttons a:active {
+  transform: scale(0.95);
+}
+
+.sticky-call {
+  background: #ffc107;
+  color: #000;
+}
+
+.sticky-max {
+  background: #0077ff;
+  color: #fff;
+}
+
+.sticky-map {
+  background: #4caf50;
+  color: #fff;
+}
+
+/* Показываем только на мобильных */
+@media (max-width: 768px) {
+  .sticky-buttons {
+    display: grid;
+  }
+
+  body {
+    padding-bottom: 70px; /* чтобы футер не перекрывался */
+  }
+}
+
+/* Бургер-меню */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background: #ffc107;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    z-index: 999;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    font-size: 20px;
+    margin: 15px 0;
   }
 }

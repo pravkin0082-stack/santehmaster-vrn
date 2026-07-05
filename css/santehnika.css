@@ -101,7 +101,8 @@ h2 {
 }
 
 .gallery img {
-  width: 100%;
+  width: 400px;
+  height: 200px;
   border-radius: 20px;
   height: 300px;
   object-fit: cover;
@@ -575,5 +576,63 @@ h2 {
     font-size: 18px !important;
     padding: 15px !important;
     box-sizing: border-box;
+  }
+}
+
+/* Бургер-меню */
+.burger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 22px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.burger span {
+  display: block;
+  height: 3px;
+  background: #ffc107;
+  border-radius: 3px;
+  transition: all 0.3s;
+}
+
+.burger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+.burger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+@media (max-width: 768px) {
+  .burger {
+    display: flex;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: right 0.3s;
+    z-index: 999;
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  nav a {
+    font-size: 20px;
+    margin: 15px 0;
   }
 }
