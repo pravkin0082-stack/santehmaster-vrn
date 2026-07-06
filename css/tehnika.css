@@ -772,3 +772,170 @@ h2 {
     padding: 14px 20px !important;
   }
 }
+/* ========================================
+   ИСПРАВЛЕНИЕ БУРГЕРА И FAQ ДЛЯ SANTEHNIKA.HTML
+   ======================================== */
+
+/* Бургер - принудительно показываем */
+@media (max-width: 768px) {
+  .burger {
+    display: flex !important;
+    width: 26px !important;
+    height: 20px !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    cursor: pointer !important;
+    z-index: 1001 !important;
+    position: relative !important;
+  }
+
+  .burger span {
+    display: block !important;
+    height: 2.5px !important;
+    background: #ffc107 !important;
+    border-radius: 3px !important;
+    transition: all 0.3s !important;
+    width: 100% !important;
+  }
+
+  .burger.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px) !important;
+  }
+
+  .burger.active span:nth-child(2) {
+    opacity: 0 !important;
+  }
+
+  .burger.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px) !important;
+  }
+
+  /* Мобильное меню */
+  nav {
+    position: fixed !important;
+    top: 0 !important;
+    right: -100% !important;
+    width: 80% !important;
+    height: 100vh !important;
+    background: #1a1a1a !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 20px !important;
+    transition: right 0.3s !important;
+    z-index: 1000 !important;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5) !important;
+    padding: 60px 20px 20px !important;
+  }
+
+  nav.active {
+    right: 0 !important;
+  }
+
+  nav a {
+    color: #ffffff !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    text-decoration: none !important;
+    padding: 12px 20px !important;
+    width: 100% !important;
+    text-align: center !important;
+    border-bottom: 1px solid #333 !important;
+  }
+}
+
+/* FAQ аккордеон - исправление */
+.faq-list {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 15px !important;
+}
+
+.faq-item {
+  background: #fff !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1) !important;
+}
+
+.faq-question {
+  padding: 18px 20px !important;
+  cursor: pointer !important;
+  position: relative !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+}
+
+.faq-question h3 {
+  margin: 0 !important;
+  font-size: 18px !important;
+  line-height: 1.4 !important;
+  padding-right: 35px !important;
+  flex: 1 !important;
+}
+
+.faq-icon {
+  position: absolute !important;
+  top: 18px !important;
+  right: 20px !important;
+  font-size: 28px !important;
+  font-weight: bold !important;
+  color: #ffc107 !important;
+  transition: transform 0.3s !important;
+  line-height: 1 !important;
+}
+
+.faq-item.active .faq-icon {
+  transform: rotate(45deg) !important;
+}
+
+.faq-answer {
+  max-height: 0 !important;
+  overflow: hidden !important;
+  transition: max-height 0.3s ease-out !important;
+  padding: 0 20px !important;
+}
+
+.faq-item.active .faq-answer {
+  max-height: 500px !important;
+  padding: 0 20px 18px 20px !important;
+}
+
+.faq-answer p {
+  margin: 0 !important;
+  font-size: 16px !important;
+  line-height: 1.6 !important;
+  color: #555 !important;
+}
+
+/* Мобильная версия FAQ */
+@media (max-width: 768px) {
+  .faq-question {
+    padding: 15px 18px !important;
+  }
+
+  .faq-question h3 {
+    font-size: 16px !important;
+    padding-right: 30px !important;
+  }
+
+  .faq-icon {
+    top: 15px !important;
+    right: 15px !important;
+    font-size: 24px !important;
+  }
+
+  .faq-answer {
+    padding: 0 18px !important;
+  }
+
+  .faq-item.active .faq-answer {
+    padding: 0 18px 15px 18px !important;
+  }
+
+  .faq-answer p {
+    font-size: 15px !important;
+  }
+}
