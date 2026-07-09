@@ -836,3 +836,166 @@ nav a:hover {
     padding: 12px 8px;
   }
 }
+/* ========================================
+   КРАСИВЫЙ БЛОК ПРАЙСА
+   ======================================== */
+
+.price-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+  position: relative;
+}
+
+.price-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.price-card.popular {
+  border: 3px solid #ffc107;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: #ffc107;
+  color: #000;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+  z-index: 10;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.price-card-header {
+  padding: 25px;
+  color: white;
+  text-align: center;
+  position: relative;
+}
+
+.price-icon {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.price-icon img {
+  width: 45px;
+  height: 45px;
+}
+
+.price-card-header h3 {
+  font-size: 22px;
+  margin: 0;
+  font-weight: 700;
+}
+
+.price-list {
+  padding: 20px 25px 25px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px dashed #eee;
+  gap: 10px;
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-item span {
+  font-size: 15px;
+  color: #555;
+  flex: 1;
+  line-height: 1.4;
+}
+
+.price-item strong {
+  font-size: 16px;
+  color: #222;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Адаптация */
+@media (max-width: 768px) {
+  .price-card:hover {
+    transform: none;
+  }
+
+  .price-card-header {
+    padding: 20px;
+  }
+
+  .price-icon {
+    font-size: 36px;
+  }
+
+  .price-card-header h3 {
+    font-size: 20px;
+  }
+
+  .price-list {
+    padding: 15px 20px 20px;
+  }
+
+  .price-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+  .price-item strong {
+    font-size: 18px;
+    color: #e53935;
+  }
+
+  .popular-badge {
+    font-size: 11px;
+    padding: 5px 10px;
+    top: 10px;
+    right: 10px;
+  }
+}
+@media (max-width: 768px) {
+  /* Аварийный вызов — компактный на мобильных */
+  #price > div > div[style*="background: linear-gradient(135deg, #ff5252"] {
+    padding: 15px 18px !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 12px !important;
+  }
+
+  #price
+    > div
+    > div[style*="background: linear-gradient(135deg, #ff5252"]
+    > div:first-child {
+    min-width: 0 !important;
+  }
+
+  #price
+    > div
+    > div[style*="background: linear-gradient(135deg, #ff5252"]
+    > div:last-child {
+    justify-content: space-between !important;
+    width: 100%;
+  }
+
+  #price > div > div[style*="background: linear-gradient(135deg, #ff5252"] a {
+    flex: 1;
+    text-align: center;
+    font-size: 15px !important;
+    padding: 12px 18px !important;
+  }
+}

@@ -651,12 +651,25 @@
         </div>
       </div>
     </section>
-    <section style="padding: 90px 0; background: #fafafa" id="price">
+    <!-- БЛОК ПРАЙСА -->
+    <section
+      style="
+        padding: 90px 0;
+        background: linear-gradient(180deg, #fafafa 0%, #fff 100%);
+      "
+      id="price"
+    >
       <div class="container">
-        <h2 style="text-align: center; font-size: 44px; margin-bottom: 20px">
+        <h2
+          style="
+            text-align: center;
+            font-size: 44px;
+            margin-bottom: 15px;
+            font-weight: 800;
+          "
+        >
           Прайс на услуги сантехника
         </h2>
-
         <p
           style="
             text-align: center;
@@ -665,77 +678,435 @@
             margin-bottom: 50px;
           "
         >
-          Точная стоимость зависит от сложности работ
+          Честные цены — озвучиваю стоимость <strong>до начала работ</strong>
         </p>
+        <!-- БЛОК АВАРИЙНОГО ВЫЗОВА (КОМПАКТНЫЙ) -->
+        <div
+          style="
+            background: linear-gradient(135deg, #ff5252 0%, #d32f2f 100%);
+            padding: 18px 25px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+            box-shadow: 0 5px 15px rgba(211, 47, 47, 0.25);
+          "
+        >
+          <!-- Левая часть: иконка + текст -->
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              flex: 1;
+              min-width: 250px;
+            "
+          >
+            <div style="font-size: 32px; animation: pulse 2s infinite">🚨</div>
+            <div>
+              <div
+                style="
+                  color: white;
+                  font-size: 18px;
+                  font-weight: 700;
+                  margin-bottom: 3px;
+                  line-height: 1.2;
+                "
+              >
+                Аварийный вызов сантехника
+                <span
+                  style="
+                    background: rgba(255, 255, 255, 0.25);
+                    padding: 2px 8px;
+                    border-radius: 10px;
+                    font-size: 12px;
+                    margin-left: 8px;
+                  "
+                  >Без выходных</span
+                >
+              </div>
+              <div style="color: rgba(255, 255, 255, 0.9); font-size: 14px">
+                Протечка, засор, прорыв? Звоните!
+              </div>
+            </div>
+          </div>
 
-        <!-- Цены -->
+          <!-- Правая часть: цена + кнопка -->
+          <div
+            style="
+              display: flex;
+              align-items: center;
+              gap: 15px;
+              flex-wrap: wrap;
+            "
+          >
+            <div style="color: white; text-align: right">
+              <div
+                style="
+                  font-size: 12px;
+                  opacity: 0.85;
+                  text-transform: uppercase;
+                  letter-spacing: 1px;
+                "
+              >
+                Выезд
+              </div>
+              <div style="font-size: 24px; font-weight: 800; line-height: 1">
+                от 3 000 ₽
+              </div>
+            </div>
+            <a
+              href="tel:+79507542549"
+              style="
+                background: white;
+                color: #d32f2f;
+                padding: 12px 24px;
+                border-radius: 10px;
+                text-decoration: none;
+                font-weight: bold;
+                font-size: 16px;
+                white-space: nowrap;
+                box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+                transition: transform 0.2s;
+              "
+            >
+              📞 Вызвать
+            </a>
+          </div>
+        </div>
+
+        <style>
+          @keyframes pulse {
+            0%,
+            100% {
+              transform: scale(1);
+            }
+            50% {
+              transform: scale(1.15);
+            }
+          }
+        </style>
 
         <div
           style="
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
           "
         >
           <!-- ВОДОСНАБЖЕНИЕ -->
-          <div style="background: #fff; padding: 25px; border-radius: 15px">
-            <h3>💧 Водоснабжение</h3>
-            <p>Монтаж систем водоснабжения — <strong>от 2 000 ₽</strong></p>
-            <p>Монтаж сантехнических труб — <strong>от 2 000 ₽</strong></p>
-            <p>Демонтаж систем — <strong>от 5 000 ₽</strong></p>
-            <p>Перенос труб ХВС и ГВС — <strong>от 5 000 ₽</strong></p>
-            <p>Подвод к сети — <strong>от 2 000 ₽</strong></p>
-            <p>Проектирование — <strong>5 000 ₽</strong></p>
+          <div class="price-card">
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #2196f3 0%, #1976d2 100%);
+              "
+            >
+              <div class="price-icon">💧</div>
+              <h3>Водоснабжение</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Монтаж систем водоснабжения</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Монтаж сантехнических труб</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Перенос труб ХВС и ГВС</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Демонтаж систем водоснабжения</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Подвод к водопроводной сети</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+            </div>
           </div>
 
           <!-- КАНАЛИЗАЦИЯ -->
-          <div style="background: #fff; padding: 25px; border-radius: 15px">
-            <h3>🚰 Канализация</h3>
-            <p>Монтаж канализации — <strong>от 2 000 ₽</strong></p>
-            <p>Прокладка труб — <strong>от 2 000 ₽</strong></p>
-            <p>Демонтаж — <strong>500 ₽ — 20 000 ₽</strong></p>
-            <p>Подвод к сети — <strong>1 500 ₽</strong></p>
-            <p>Ремонт коллекторов — <strong>10 000 ₽</strong></p>
+          <div class="price-card">
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #4caf50 0%, #388e3c 100%);
+              "
+            >
+              <div class="price-icon">
+                <img
+                  src="images/icon/free-icon-sewage-2375596.png"
+                  alt="Канализация"
+                />
+              </div>
+              <h3>Канализация</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Монтаж канализации</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Прокладка канализационных труб</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Демонтаж канализации</span>
+                <strong>от 500 до 20 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Подвод к канализационной сети</span>
+                <strong>от 1 500 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Ремонт коллекторов</span>
+                <strong>от 10 000 ₽</strong>
+              </div>
+            </div>
           </div>
 
-          <!-- ОТОПЛЕНИЕ -->
-          <div style="background: #fff; padding: 25px; border-radius: 15px">
-            <h3>🔥 Отопление</h3>
-            <p>Установка радиатора — <strong>от 5 000 ₽</strong></p>
-            <p>Демонтаж труб — <strong>от 5 000 ₽</strong></p>
-            <p>Демонтаж радиаторов — <strong>от 2 000 ₽</strong></p>
+          <!-- ЗАСОРЫ — ПОПУЛЯРНОЕ -->
+          <div class="price-card popular">
+            <div class="popular-badge">🔥 Популярное</div>
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #ff5722 0%, #e64a19 100%);
+              "
+            >
+              <div class="price-icon">
+                <img
+                  src="images/icon/free-icon-plunger-16908496.png"
+                  alt="Вантуз"
+                />
+              </div>
+              <h3>Засоры</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Механическая прочистка</span>
+                <strong>от 4 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Прочистка сифона</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Прочистка унитаза</span>
+                <strong>от 3 000 ₽</strong>
+              </div>
+            </div>
           </div>
 
-          <!-- ЗАСОРЫ -->
-          <div style="background: #fff; padding: 25px; border-radius: 15px">
-            <h3>🧹 Засоры</h3>
-            <p>Устранение засора — <strong>от 3 000 ₽</strong></p>
-            <p>Прочистка канализации — <strong>от 3 000 ₽</strong></p>
-            <p>Сифон — <strong>2 000 ₽</strong></p>
-            <p>Унитаз — <strong>3 000 ₽ — 6 000 ₽</strong></p>
-          </div>
-
-          <!-- САНТЕХНИКА -->
-          <div style="background: #fff; padding: 25px; border-radius: 15px">
-            <h3>🚽 Сантехника</h3>
-            <p>Протечки — <strong>от 2 000 ₽</strong></p>
-            <p>Счётчик — <strong>от 2 500 ₽</strong></p>
-            <p>Смеситель — <strong>от 3 000 ₽</strong></p>
-            <p>Унитаз — <strong>5 000 ₽ — 10 000 ₽</strong></p>
-            <p>Ванна — <strong>7 000 ₽ — 20 000 ₽</strong></p>
+          <!-- САНТЕХНИКА — ПОПУЛЯРНОЕ -->
+          <div class="price-card popular">
+            <div class="popular-badge">⭐ Популярное</div>
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #9c27b0 0%, #7b1fa2 100%);
+              "
+            >
+              <div class="price-icon">
+                <img
+                  src="images/icon/free-icon-toilet-13506509.png"
+                  alt="Сантехника"
+                />
+              </div>
+              <h3>Сантехника</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Устранение протечек</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Замена смесителя</span>
+                <strong>от 3 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Замена счётчика воды</span>
+                <strong>от 2 500 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Установка унитаза</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Монтаж инсталляции</span>
+                <strong>от 8 000 ₽</strong>
+              </div>
+            </div>
           </div>
 
           <!-- ТЕХНИКА -->
-          <div style="background: #fff; padding: 25px; border-radius: 15px">
-            <h3>⚙️ Техника</h3>
-            <p>Стиральная машина — <strong>3 000 ₽ — 5 000 ₽</strong></p>
-            <p>Посудомойка — <strong>3 000 ₽ — 5 000 ₽</strong></p>
-            <p>Бойлер — <strong>6 000 ₽ — 20 000 ₽</strong></p>
-            <p>Полотенцесушитель — <strong>от 4 000 ₽</strong></p>
+          <div class="price-card">
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%);
+              "
+            >
+              <div class="price-icon">
+                <img
+                  src="images/icon/free-icon-washing-machine-4596009.png"
+                  alt="Стиральная машина"
+                />
+              </div>
+              <h3>Бытовая техника</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Установка бойлера</span>
+                <strong>от 6 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Подключение стиральной машины</span>
+                <strong>от 3 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Подключение посудомойки</span>
+                <strong>от 3 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Монтаж полотенцесушителя</span>
+                <strong>от 4 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Установка фильтра для воды</span>
+                <strong>от 4 000 ₽</strong>
+              </div>
+            </div>
           </div>
+
+          <!-- ВАННЫ И ДУШЕВЫЕ -->
+          <div class="price-card">
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #00bcd4 0%, #0097a7 100%);
+              "
+            >
+              <div class="price-icon">🛁</div>
+              <h3>Ванны и душевые</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Установка ванны</span>
+                <strong>от 7 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Установка душевой кабины</span>
+                <strong>от 25 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Монтаж душевого уголка</span>
+                <strong>от 10 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Установка раковины</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Кухонная мойка</span>
+                <strong>от 7 000 ₽</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- ОТОПЛЕНИЕ -->
+          <div class="price-card">
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #f44336 0%, #d32f2f 100%);
+              "
+            >
+              <div class="price-icon">
+                <img
+                  src="images/icon/free-icon-heating-room-17635636.png"
+                  alt="Батарея"
+                />
+              </div>
+              <h3>Отопление</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Установка радиатора</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Замена радиатора под ключ</span>
+                <strong>от 11 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Демонтаж радиатора</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Демонтаж труб отопления</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+            </div>
+          </div>
+
+          <!-- ТРУБЫ -->
+          <div class="price-card">
+            <div
+              class="price-card-header"
+              style="
+                background: linear-gradient(135deg, #607d8b 0%, #455a64 100%);
+              "
+            >
+              <div class="price-icon">
+                <img src="images/icon/free-icon-pipe-2860194.png" alt="Трубы" />
+              </div>
+              <h3>Замена и разводка труб</h3>
+            </div>
+            <div class="price-list">
+              <div class="price-item">
+                <span>Разводка труб (за точку)</span>
+                <strong>от 2 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Замена стояка</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Монтаж под ключ в квартире</span>
+                <strong>от 15 000 ₽</strong>
+              </div>
+              <div class="price-item">
+                <span>Демонтаж старых труб</span>
+                <strong>от 5 000 ₽</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ПРИЗЫВ ПОСЛЕ ПРАЙСА -->
+        <div style="text-align: center; margin-top: 50px">
+          <p style="font-size: 18px; color: #666; margin-bottom: 20px">
+            Не нашли нужную услугу? Позвоните — рассчитаю стоимость за 2 минуты
+          </p>
+          <a
+            href="tel:+79507542549"
+            class="btn btn-yellow"
+            style="font-size: 18px; padding: 16px 40px"
+          >
+            📞 +7 (950) 754-25-49
+          </a>
         </div>
       </div>
     </section>
+
     <section style="padding: 60px 0; background: #f5f5f5; text-align: center">
       <div class="container">
         <h2 style="font-size: 40px; margin-bottom: 20px">
