@@ -394,6 +394,7 @@
       });
     </script>
 
+    <!-- Yandex.Metrika counter -->
     <script type="text/javascript">
       (function (m, e, t, r, i, k, a) {
         m[i] =
@@ -403,7 +404,9 @@
           };
         m[i].l = 1 * new Date();
         for (var j = 0; j < document.scripts.length; j++) {
-          if (document.scripts[j].src === r) return;
+          if (document.scripts[j].src === r) {
+            return;
+          }
         }
         ((k = e.createElement(t)),
           (a = e.getElementsByTagName(t)[0]),
@@ -417,6 +420,7 @@
         "https://mc.yandex.ru/metrika/tag.js?id=109697206",
         "ym",
       );
+
       ym(109697206, "init", {
         ssr: true,
         webvisor: true,
@@ -436,5 +440,6 @@
           alt=""
         /></div
     ></noscript>
+    <!-- /Yandex.Metrika counter -->
   </body>
 </html>
