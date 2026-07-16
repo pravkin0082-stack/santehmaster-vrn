@@ -999,3 +999,124 @@ nav a:hover {
     padding: 12px 18px !important;
   }
 }
+/* =========================================
+   Стили для подвала (Footer) и перелинковки
+   ========================================= */
+
+.site-footer {
+  background-color: #111111;
+  color: #ffffff;
+  padding: 50px 0 30px;
+  font-size: 16px;
+  border-top: 3px solid #ffc107;
+}
+
+.footer-title {
+  color: #ffc107;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.footer-links-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px 40px;
+  margin-bottom: 40px;
+}
+
+.footer-links-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links-list li {
+  margin-bottom: 12px;
+}
+
+/* Стили для ссылки с иконкой */
+.footer-links-list a {
+  display: flex; /* Включаем флексбокс для выравнивания */
+  align-items: center; /* Выравниваем иконку и текст по вертикальному центру */
+  gap: 12px; /* Расстояние между иконкой и текстом */
+  color: #cccccc;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 15px;
+  line-height: 1.4;
+}
+
+/* Стили для самой иконки */
+.footer-icon {
+  width: 22px; /* Фиксированная ширина */
+  height: 22px; /* Фиксированная высота */
+  object-fit: contain; /* Сохраняет пропорции изображения */
+  flex-shrink: 0; /* Запрещаем иконке сжиматься, если текст длинный */
+  transition:
+    transform 0.3s ease,
+    filter 0.3s ease;
+}
+
+/* Эффекты при наведении на всю строку */
+.footer-links-list a:hover {
+  color: #ffc107;
+  transform: translateX(5px); /* Плавный сдвиг всей строки вправо */
+}
+
+.footer-links-list a:hover .footer-icon {
+  transform: scale(1.15); /* Легкое увеличение иконки при наведении */
+  /* Если ваши иконки черные/серые и вы хотите сделать их желтыми при наведении, 
+     раскомментируйте строку ниже (работает для полностью черных иконок): */
+  /* filter: brightness(0) saturate(100%) invert(84%) sepia(29%) saturate(749%) hue-rotate(359deg) brightness(101%) contrast(101%); */
+}
+
+.footer-divider {
+  height: 1px;
+  background-color: #333333;
+  margin: 0 0 25px 0;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+}
+
+.copyright {
+  margin: 0;
+  font-size: 15px;
+  color: #ffffff;
+}
+
+.privacy {
+  margin: 0;
+  font-size: 14px;
+}
+
+.privacy a {
+  color: #ffc107;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.privacy a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/* Адаптив для планшетов и десктопов */
+@media (min-width: 768px) {
+  .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+
+  .footer-title {
+    text-align: left;
+  }
+}
