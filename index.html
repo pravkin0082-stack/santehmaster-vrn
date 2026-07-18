@@ -1212,52 +1212,120 @@
       </div>
     </section>
 
-    <!-- Контакты -->
-
-    <section
-      id="contacts"
-      style="
-        padding: 100px 0;
-        background: #111;
-        color: white;
-        text-align: center;
-      "
-    >
+    <!-- КОНТАКТЫ -->
+    <section id="contacts" class="contacts-section">
       <div class="container">
         <h2 class="section-title" style="color: white">КОНТАКТЫ</h2>
+        <p class="contacts-subtitle">
+          Я на связи ежедневно с 8:00 до 22:00. Позвоните или напишите мне,
+          чтобы обсудить вашу задачу и узнать точную стоимость.
+        </p>
 
-        <div style="font-size: 28px; line-height: 2; margin-top: 40px">
-          <p>📞 +7 (950) 754-25-49</p>
-
-          <p>
-            ✉
-            <a href="mailto:sander54828589@mail.ru" style="color: white">
-              sander54828589@mail.ru
+        <div class="contacts-grid">
+          <!-- 1. Телефон -->
+          <div class="contact-card">
+            <span class="contact-icon">📞</span>
+            <span class="contact-label">Позвонить мастеру</span>
+            <a
+              href="tel:+79507542549"
+              class="contact-value"
+              onclick="ym(109697206, 'reachGoal', 'phone_click')"
+            >
+              +7 (950) 754-25-49
             </a>
-          </p>
+          </div>
 
-          <p>
-            VK:
+          <!-- 2. Мессенджер MAX -->
+          <div class="contact-card">
+            <span class="contact-icon">
+              <img
+                src="images/icon/MAX-32x32.png"
+                alt="MAX"
+                width="32"
+                height="32"
+                style="display: block"
+              />
+            </span>
+            <span class="contact-label">Написать в MAX</span>
+            <a
+              href="https://max.ru/u/f9LHodD0cOLFTzofiPfg1xkm-Vz_ox9JEG92-BlYmTcTkzZdpzP6lUhtj6s"
+              target="_blank"
+              class="contact-value small-text"
+              onclick="ym(109697206, 'reachGoal', 'max_click')"
+            >
+              Открыть чат
+            </a>
+          </div>
+
+          <!-- 3. ВКонтакте -->
+          <div class="contact-card">
+            <span class="contact-icon">
+              <img
+                src="images/icon/free-icon-vk-5968835.png"
+                alt="ВКонтакте"
+                width="32"
+                height="32"
+                style="display: block"
+              />
+            </span>
+            <span class="contact-label">ВКонтакте</span>
             <a
               href="https://vk.ru/id789050101"
               target="_blank"
-              style="color: white"
+              class="contact-value small-text"
             >
-              Мой профиль ВКонтакте
+              Мой профиль ВК
             </a>
-          </p>
+          </div>
 
-          <p>📍 Выезд по всему городу Воронежу</p>
+          <!-- 4. Адрес и Почта -->
+          <div class="contact-card">
+            <span class="contact-icon">📍</span>
+            <span class="contact-label">Работаю и выезжаю</span>
+            <span class="contact-value small-text">
+              г. Воронеж и пригород<br />
+              <span
+                style="
+                  color: #888;
+                  font-weight: 400;
+                  font-size: 14px;
+                  margin-top: 8px;
+                  display: block;
+                "
+              >
+                ✉
+                <a
+                  href="mailto:sander54828589@mail.ru"
+                  style="color: #ffc107; text-decoration: none"
+                  >sander54828589@mail.ru</a
+                >
+              </span>
+            </span>
+          </div>
         </div>
 
-        <div class="buttons" style="justify-content: center; margin-top: 50px">
+        <!-- Кнопки действия -->
+        <div class="contacts-actions">
+          <a
+            href="tel:+79507542549"
+            class="btn btn-yellow"
+            onclick="ym(109697206, 'reachGoal', 'phone_click')"
+          >
+            📞 Позвонить сейчас
+          </a>
           <a
             href="https://max.ru/u/f9LHodD0cOLFTzofiPfg1xkm-Vz_ox9JEG92-BlYmTcTkzZdpzP6lUhtj6s"
             target="_blank"
-            class="btn btn-yellow"
+            class="btn btn-max"
             onclick="ym(109697206, 'reachGoal', 'max_click')"
           >
-            НАПИСАТЬ В MAX
+            <img
+              src="images/icon/MAX-32x32.png"
+              alt="MAX"
+              width="32"
+              height="32"
+            />
+            <span>Написать в MAX</span>
           </a>
         </div>
       </div>
