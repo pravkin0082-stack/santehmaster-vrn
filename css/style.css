@@ -1120,3 +1120,90 @@ nav a:hover {
     text-align: left;
   }
 }
+/* =========================================
+   Блок районов Воронежа (Главная страница)
+   ========================================= */
+
+.main-districts-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #ffffff 0%, #f9f9f9 100%);
+  text-align: center;
+}
+
+.main-districts-section h2 {
+  font-size: 36px;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.main-districts-section .section-subtitle {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 40px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
+}
+
+.districts-main-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: 0 auto 40px auto;
+}
+
+.district-main-card {
+  background: #ffffff;
+  padding: 25px 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  border-bottom: 3px solid transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.district-main-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(255, 193, 7, 0.2);
+  border-bottom: 3px solid #ffc107;
+}
+
+.district-main-card .district-icon {
+  font-size: 36px;
+}
+
+.district-main-card .district-name {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+}
+
+.district-main-card .district-time {
+  font-size: 14px;
+  color: #888;
+  background: #f0f0f0;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.suburbs-note {
+  background: #fff8e1;
+  border-left: 4px solid #ffc107;
+  padding: 20px 25px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.suburbs-note strong {
+  color: #333;
+}
