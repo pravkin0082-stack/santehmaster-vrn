@@ -630,3 +630,84 @@
   color: #d32f2f;
   text-align: right;
 }
+
+/* ===== ГАЛЕРЕЯ РАБОТ ===== */
+.works-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 25px;
+  margin-bottom: 20px;
+}
+
+.work-item {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+.work-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.work-photo {
+  width: 100%;
+  height: 280px;
+  overflow: hidden;
+  background: #f5f5f5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.work-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.work-desc {
+  padding: 20px;
+}
+
+.work-desc h3 {
+  margin: 0 0 12px 0;
+  font-size: 18px;
+  color: #333;
+  font-weight: 600;
+}
+
+.work-desc p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+  color: #666;
+}
+
+/* Адаптив для мобильных */
+@media (max-width: 600px) {
+  .works-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .work-photo {
+    height: 250px;
+  }
+}
+
+/* Если фото одно — делаем его шире */
+.works-gallery-grid:has(.work-item:nth-child(1):only-child) {
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+}
+
+.works-gallery-grid:has(.work-item:nth-child(1):only-child) .work-photo {
+  height: 350px;
+}
