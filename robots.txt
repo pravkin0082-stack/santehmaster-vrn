@@ -1,5 +1,11 @@
+User-agent: Yandex
+Allow: /
+Disallow: /*?*
+Clean-param: spm
+
 User-agent: *
 Allow: /
+Disallow: /*?*
 Disallow: /privacy.html
 
 Sitemap: https://santehmaster-vrn.ru/sitemap.xml
